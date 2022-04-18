@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Talking Stopwatch</string>
+    <string name="start">start</string>
+    <string name="reset">reset</string>
+    <string name="notification_frequency">Notification Frequency</string>
+    <string name="set">set</string>
+    <string name="cancel">cancel</string>
+    <string name="Seconds">Seconds</string>
+    <string name="Minutes">Minutes</string>
+</resources>

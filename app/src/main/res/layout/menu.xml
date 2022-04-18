@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <Button
+        android:id="@+id/frequency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:padding="25dp"
+        android:text="Notification Frequency"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <NumberPicker
+        android:visibility="gone"
+        android:id="@+id/numberPicker1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/grey"
+        android:layout_marginTop="100dp"
+        app:layout_constraintRight_toLeftOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/frequency" />
+
+
+    <NumberPicker
+        android:visibility="gone"
+        android:id="@+id/numberPicker2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/grey"
+        android:layout_marginTop="100dp"
+        app:layout_constraintLeft_toRightOf="@id/guideline3"
+        app:layout_constraintTop_toBottomOf="@id/frequency" />
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/minutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/frequency"
+        android:layout_marginTop="100dp"
+        android:paddingVertical="73dp"
+        android:paddingLeft="20dp"
+        android:text="@string/Minutes"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:background="@color/grey"
+        app:layout_constraintRight_toLeftOf="@id/numberPicker1"
+         />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/seconds"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@color/grey"
+        android:paddingVertical="73dp"
+        android:paddingRight="20dp"
+        android:text="@string/Seconds"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintLeft_toRightOf="@id/numberPicker2"
+        app:layout_constraintTop_toBottomOf="@id/frequency" />
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/setbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="setit"
+        android:text="@string/set"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/seconds"
+        app:layout_constraintLeft_toRightOf="@id/guideline3" />
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/cancelbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/minutes"
+        app:layout_constraintRight_toLeftOf="@id/guideline3"
+        android:text="@string/cancel"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:onClick="cancelit"/>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent=".5"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
